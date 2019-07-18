@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    <IfModule mod_headers.c>
+      <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+        Header set Access-Control-Allow-Origin "*"
+      </FilesMatch>
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+    #RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+  php_value post_max_size 2000M
+  php_value upload_max_filesize 2500M
+  php_value max_execution_time 6000000000
+  php_value max_input_time 6000000
+  php_value memory_limit 2500M
+  php_value max_input_vars 100000
+
+</IfModule>

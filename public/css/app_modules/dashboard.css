@@ -1,0 +1,101 @@
+.card-chart .card-header {
+  position: absolute;
+  background-color: #118bdb;
+  color: white;
+  border-radius: 50rem;
+  top: 0;
+  transform: translateY(-50%);
+  left: 1rem;
+  box-shadow: 0 0.15rem 1.5rem rgb(9, 139, 221, .5);
+  padding-left: 3rem;
+}
+
+.card-chart .card-header h5 {
+  font-size: 1em;
+}
+
+.card-chart {
+  position: relative;
+  border: 1px solid #e4e4e4;
+  border-radius: .75rem !important;
+}
+
+.btn-chart-right {
+  box-shadow: 0 0.1rem .5rem rgb(0, 0, 0, .3);
+  height: 2rem;
+  width: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-chart-right+.btn-chart-right {
+  margin-left: .5rem;
+}
+
+.card-chart .card-header i {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50rem;
+}
+
+.card-chart .card-header i:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.dashboard-caption {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.dashboard-caption h5 {
+  padding-top: .7rem;
+  padding-bottom: .65rem;
+  padding-left: 2rem;
+}
+
+.dashboard-caption .btn {
+  padding-top: .67rem;
+  padding-bottom: .67rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-color: #098bdd;
+}
+
+.dashboard-caption>i {
+  position: absolute;
+  height: 46px;
+  width: 46px;
+  background-color: #005c98;
+  left: 0px;
+  top: 0px;
+  border-radius: 50rem;
+  color: white;
+}
+
+.dashboard-caption>i:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media(min-width:1601px) {
+  .card-chart .card-header {
+    padding-left: 3.5rem;
+  }
+  .card-chart .card-header h5 {
+    font-size: 1.2em;
+  }
+  .card-chart .card-header i {
+    width: 46px;
+    height: 46px;
+  }
+}
